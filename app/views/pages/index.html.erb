@@ -1,0 +1,30 @@
+
+<div class="pages index container">
+    <h1>Pages</h1>
+
+    <%= link_to('Add New Page', new_page_path, :class => ' badge badge-primary action new') %>
+
+    <table class=" table listing" summary='Page list'>
+        <tr class='header'>
+            <th>#</th>
+            <th>Page</th>
+            <th>Subjects</th>
+            <th>Visible</th>
+            <th>Actions</th>
+        </tr>
+        <% @pages.each do |page| %>
+        <tr>
+            <td><%= page.position %></td>
+            <td><%= page.name %></td>
+            <td><%= page.subject.name if page.subject %></td>
+            <td><%= page.visible ? 'Yes' : 'No'%></td>
+            <td class="actions">
+                <%= link_to("Show", page_path(page), :class => 'badge badge-info action show') %>
+                <%= link_to("Edit", edit_page_path(page), :class => 'badge badge-warning action edit') %>
+                <%= link_to("Delete", delete_page_path(page), :class => 'badge badge-danger action delete') %>
+            </td>
+        </tr>
+        <% end %>
+
+    </table>
+</div>

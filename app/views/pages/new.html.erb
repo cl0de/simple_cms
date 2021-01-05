@@ -1,0 +1,19 @@
+<div class="container">
+<%= link_to("<< Back to list", pages_path, :class => 'badge badge-primary Back-link') %>
+
+<div class="pages new">
+    <h1>Create Page</h1>
+
+    <%= form_for(@page, :url => pages_path, :method => 'post') do |f| %>
+
+    <%= render(:partial => 'form', :locals =>{:f => f} ) %>
+
+    <div class="form-buttons">
+        <%= f.submit("Create Page",  class: "btn btn-primary") %>
+    </div>
+
+    <% end %>
+</div>
+</div>
+
+ 

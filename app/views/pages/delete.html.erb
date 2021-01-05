@@ -1,0 +1,18 @@
+<div class="container">
+<%= link_to("<< Back to list", pages_path, :class => 'badge badge-primary Back-link') %>
+
+<div class="pages delete">
+    <h1>Delete Page</h1>
+    <br>
+    <%= form_for(@page, :method => 'delete') do |f| %>
+
+    <p class="alert alert-danger">Are you sure you want permenantly delete this page?</p>
+    <p class="font-weight-bold"><%= @page.name %></p>
+    <br>
+    <div class="form-buttons">
+        <%= f.submit("Delete Page", class: "btn btn-primary") %>
+    </div>
+
+    <% end %>
+</div>
+</div>

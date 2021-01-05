@@ -1,0 +1,29 @@
+<div class="container">
+<%= link_to("<< Back to list", subjects_path, :class => 'badge badge-primary back-link') %>
+<div class="subjects show">
+    <h1>Show Subject</h1>
+    <br>                       
+    <table class="table table-bordered" summary="Subject detail view">
+        <tr>
+            <th>Name</th>
+            <td><%= @subject.name %></td>
+        </tr>
+        <tr>
+            <th>Position</th>
+            <td><%= @subject.position %></td>
+        </tr>
+        <tr>
+            <th>Visible?</th>
+            <td><%= @subject.visible ? 'true' : 'false' %></td>
+        </tr>
+        <tr>
+            <th>Created</th>
+            <td><%= @subject.created_at %></td>
+        </tr>
+        <tr>
+            <th>Updated</th>
+            <td><%= @subject.updated_at %></td>
+        </tr>
+    </table>
+</div>
+</div>

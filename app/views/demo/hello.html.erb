@@ -1,0 +1,20 @@
+<h1>Hello World!</h1>
+<p>This is the Hello page</p>
+
+<%= 1+1 %>
+<br>
+<br>
+<%=
+    link_to('Hello Friends', 'http://google.com')
+%>
+<br>
+<%= link_to('Second Hello', {:action => 'index'})%>
+
+<br>
+<%= link_to('Third Hello', {:action => 'hello', :name => 'Joe', :id => 5})%>
+
+<br>
+
+ID: <%= @id %>
+<br>
+Name: <%= @name %>

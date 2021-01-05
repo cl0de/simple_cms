@@ -1,0 +1,17 @@
+<div class="container">
+<%= link_to("<< Back to list", subjects_path, :class => 'badge badge-primary Back-link') %>
+
+<div class="subjects edit">
+    <h2>Update Subject</h2>
+
+    <%= form_for(@subject) do |f|%>
+
+    <%= render(:partial => 'form', :locals =>{:f => f} ) %>
+
+    <div class="form-buttons">
+    <%= f.submit("Update Subject", class: "btn btn-primary") %>
+    </div>
+
+    <% end %>
+</div>
+</div>

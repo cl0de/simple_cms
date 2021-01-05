@@ -1,0 +1,17 @@
+<div class="container">
+<%= link_to("<< Back to list", pages_path, :class => 'badge badge-primary Back-link') %>
+
+<div class="pages edit">
+    <h1>Update Page</h1>
+
+    <%= form_for(@page) do |f|%>
+
+    <%= render(:partial => 'form', :locals =>{:f => f} ) %>
+
+    <div class="form-buttons">
+    <%= f.submit("Update Page", class: "btn btn-primary") %>
+    </div>
+
+    <% end %>
+</div>
+</div>

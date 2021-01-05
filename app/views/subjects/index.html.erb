@@ -1,0 +1,37 @@
+<div class="container index">
+    <h1>Subjects</h1>
+    <br>
+    <p><%= link_to('Add New Subject', new_subject_path, :class => 'badge badge-primary action new') %></p>
+
+    <table class="listing table" summary='Subject list'>
+    <thead>
+        <tr class='header'>
+            
+            <th scope="col">#</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Visible</th>
+            <th scope="col">Pages</th>
+            <% if logged_in? && current_user.admin? %>
+            <th scope="col">Actions</th>
+            <% end %>
+        </tr>
+        </thead>
+        <% @subjects.each do |subject| %>
+        <tr>
+            
+            <td><%= subject.position %></td>
+            <td><%= subject.name %></td>
+            <td><%= subject.visible ? 'Yes' : 'No'%></td>
+            <td><%= subject.pages.size %></td>
+            <% if logged_in? && current_user.admin? %>
+            <td class="actions">
+                <%= link_to("Show", subject_path(subject), :class => 'badge badge-info action show') %>
+                <%= link_to("Edit", edit_subject_path(subject), :class => 'badge badge-warning action edit') %>
+                <%= link_to("Delete", delete_subject_path(subject), :class => 'badge badge-danger action delete') %>
+            </td>
+            <% end %>
+        </tr>
+        <% end %>
+
+    </table>
+</div>
