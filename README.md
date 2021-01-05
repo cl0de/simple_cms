@@ -1,8 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a **Simple CMS app** built with ruby/rails.
+The user is able to signup and create new user account or login to an existing account.
+Users can update their profile.
+Only logged in user is able to visit other cms resources
 
+----------------------------------------------------------------
 Things you may want to cover:
 
 * Ruby version
